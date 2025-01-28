@@ -286,6 +286,24 @@
             font-family: 'Comic Sans MS', cursive;
             font-size: 2.0rem; /* Adjust font size */
         }
+        .button.happy {
+            background-color: #ffff66; /* Light Yellow */
+            color: #ff0000; /* Red */
+            font-family: 'Comic Sans MS', cursive;
+            font-size: 2.0rem; /* Adjust font size */
+        }
+        .button.sad {
+            background-color: #6699ff; /* Light Blue */
+            color: #ffffff; /* White */
+            font-family: 'Comic Sans MS', cursive;
+            font-size: 2.0rem; /* Adjust font size */
+        }
+        .button.ouch {
+            background-color: #ff6666; /* Light Red */
+            color: #000000; /* Black */
+            font-family: 'Comic Sans MS', cursive;
+            font-size: 2.0rem; /* Adjust font size */
+        }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.37.0/tsparticles.min.js"></script>
     <script>
@@ -403,6 +421,11 @@
         <!-- Group 7 -->
         <button class="button word-button size2 help" onclick="playAudio('audio/Help.mp3'); createFireworkParticles(this);">Help</button>
         <button class="button word-button size2 sleep" onclick="playAudio('audio/Sleep.mp3'); createFireworkParticles(this);">Sleep</button>
+        <button class="button word-button size2 happy" onclick="playAudio('audio/Happy.mp3'); createFireworkParticles(this);">Happy</button>
+        <button class="button word-button size2 sad" onclick="playAudio('audio/Sad.mp3'); createFireworkParticles(this);">Sad</button>
+        <button class="button word-button size2 ouch" onclick="playAudio('audio/Ouch.mp3'); createFireworkParticles(this);">Ouch</button>
+        <button class="button word-button size2" onclick="playAudio('audio/Yes.mp3'); createFireworkParticles(this);">Yes</button>
+        <button class="button word-button size2" onclick="playAudio('audio/No.mp3'); createFireworkParticles(this);">No</button>
         
         <!-- Empty Space -->
         <div class="empty"></div>
