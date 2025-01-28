@@ -19,10 +19,10 @@
             display: grid;
             grid-template-columns: repeat(6, 1fr);
             grid-template-rows: repeat(8, 1fr);
-            gap: 10px;
-            padding: 10px;
-            width: 768px;
-            height: 1024px;
+            gap: 5px; /* Reduce gap */
+            padding: 5px; /* Reduce padding */
+            width: 90vw; /* Adjust width to fit screen */
+            height: 90vh; /* Adjust height to fit screen */
             max-width: 100%;
             max-height: 100%;
             border: 3px solid #ccc;
@@ -34,7 +34,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 2.4rem; /* Double the current size */
+            font-size: 1.8rem; /* Adjust font size */
             font-weight: bold;
             color: white;
             text-align: center;
@@ -55,12 +55,41 @@
         .fun-button {
             background-color: #cc7a00; /* Even darker yellow */
         }
-        .size1, .size2, .size3, .size4, .size5, .size6, .size7, .size8 {
-            grid-row: span 1; /* Make all buttons the same height */
+        .size1 {
+            grid-row: span 1;
+            grid-column: span 1;
+        }
+        .size2 {
+            grid-row: span 1;
+            grid-column: span 2;
+        }
+        .size3 {
+            grid-row: span 2;
+            grid-column: span 1;
+        }
+        .size4 {
+            grid-row: span 2;
+            grid-column: span 2;
+        }
+        .size5 {
+            grid-row: span 1;
+            grid-column: span 3;
+        }
+        .size6 {
+            grid-row: span 3;
+            grid-column: span 1;
+        }
+        .size7 {
+            grid-row: span 2;
+            grid-column: span 3;
+        }
+        .size8 {
+            grid-row: span 3;
+            grid-column: span 2;
         }
         .empty {
-            grid-column: span 1;
-            grid-row: span 1;
+            grid-column: span 2;
+            grid-row: span 2;
         }
         .particle {
             position: absolute;
@@ -80,90 +109,182 @@
             left: 0;
             z-index: -1;
         }
+        .button.finn, .button.mom, .button.want, .button.dad, .button.fun-sound-1, .button.grandma, .button.eat, .button.declan, .button.fun-sound-2, .button.ashling, .button.killian, .button.dont-want, .button.aunt, .button.uncle, .button.fun-sound-3, .button.funny, .button.fun-sound-4, .button.watch, .button.cuddle, .button.baby, .button.fun-sound-5, .button.poop, .button.sing, .button.play, .button.love, .button.fun-sound-6, .button.fun-sound-7 {
+            background-image: none; /* Remove background images */
+        }
         .button.finn {
-            background-image: url('images/Finn.jpg');
+            background-color: #ff9999; /* Light Red */
+            color: #ffffff; /* White */
+            font-family: 'Arial', sans-serif;
+            font-size: 1.8rem; /* Adjust font size */
         }
         .button.mom {
-            background-image: url('images/Mom.jpg');
+            background-color: #99ccff; /* Light Blue */
+            color: #ff0000; /* Red */
+            font-family: 'Verdana', sans-serif;
+            font-size: 2.0rem; /* Adjust font size */
         }
         .button.want {
-            background-image: url('images/Want.jpg');
+            background-color: #ffcc99; /* Light Orange */
+            color: #0000ff; /* Blue */
+            font-family: 'Courier New', monospace;
+            font-size: 2.2rem; /* Adjust font size */
         }
         .button.dad {
-            background-image: url('images/Dad.jpg');
+            background-color: #99ff99; /* Light Green */
+            color: #ff00ff; /* Magenta */
+            font-family: 'Georgia', serif;
+            font-size: 1.8rem; /* Adjust font size */
         }
         .button.fun-sound-1 {
-            background-image: url('images/FunSound1.jpg');
+            background-color: #ffccff; /* Light Pink */
+            color: #00ff00; /* Green */
+            font-family: 'Tahoma', sans-serif;
+            font-size: 2.0rem; /* Adjust font size */
         }
         .button.grandma {
-            background-image: url('images/Grandma.jpg');
+            background-color: #ffff99; /* Light Yellow */
+            color: #ff00ff; /* Magenta */
+            font-family: 'Times New Roman', serif;
+            font-size: 2.2rem; /* Adjust font size */
         }
         .button.eat {
-            background-image: url('images/Eat.jpg');
+            background-color: #cc99ff; /* Light Purple */
+            color: #00ffff; /* Cyan */
+            font-family: 'Arial', sans-serif;
+            font-size: 1.8rem; /* Adjust font size */
         }
         .button.declan {
-            background-image: url('images/Declan.jpg');
+            background-color: #99ffff; /* Light Cyan */
+            color: #ff6600; /* Orange */
+            font-family: 'Verdana', sans-serif;
+            font-size: 2.0rem; /* Adjust font size */
         }
         .button.fun-sound-2 {
-            background-image: url('images/FunSound2.jpg');
+            background-color: #ff9966; /* Light Coral */
+            color: #0000ff; /* Blue */
+            font-family: 'Courier New', monospace;
+            font-size: 2.2rem; /* Adjust font size */
         }
         .button.ashling {
-            background-image: url('images/Ashling.jpg');
+            background-color: #66ffcc; /* Light Aquamarine */
+            color: #ff0000; /* Red */
+            font-family: 'Georgia', serif;
+            font-size: 1.8rem; /* Adjust font size */
         }
         .button.killian {
-            background-image: url('images/Killian.jpg');
+            background-color: #ff6699; /* Light Hot Pink */
+            color: #00ff00; /* Green */
+            font-family: 'Tahoma', sans-serif;
+            font-size: 2.0rem; /* Adjust font size */
         }
         .button.dont-want {
-            background-image: url('images/DontWant.jpg');
+            background-color: #66ccff; /* Light Sky Blue */
+            color: #ff6600; /* Orange */
+            font-family: 'Times New Roman', serif;
+            font-size: 2.2rem; /* Adjust font size */
         }
         .button.aunt {
-            background-image: url('images/Aunt.jpg');
+            background-color: #ffcc66; /* Light Peach */
+            color: #0000ff; /* Blue */
+            font-family: 'Arial', sans-serif;
+            font-size: 1.8rem; /* Adjust font size */
         }
         .button.uncle {
-            background-image: url('images/Uncle.jpg');
+            background-color: #99ff66; /* Light Lime */
+            color: #ff0000; /* Red */
+            font-family: 'Verdana', sans-serif;
+            font-size: 2.0rem; /* Adjust font size */
         }
         .button.fun-sound-3 {
-            background-image: url('images/FunSound3.jpg');
+            background-color: #cc99cc; /* Light Orchid */
+            color: #00ffff; /* Cyan */
+            font-family: 'Courier New', monospace;
+            font-size: 2.2rem; /* Adjust font size */
         }
         .button.funny {
-            background-image: url('images/Funny.jpg');
+            background-color: #ffff66; /* Light Lemon */
+            color: #ff00ff; /* Magenta */
+            font-family: 'Georgia', serif;
+            font-size: 1.8rem; /* Adjust font size */
         }
         .button.fun-sound-4 {
-            background-image: url('images/FunSound4.jpg');
+            background-color: #ccff99; /* Light Green Yellow */
+            color: #0000ff; /* Blue */
+            font-family: 'Tahoma', sans-serif;
+            font-size: 2.0rem; /* Adjust font size */
         }
         .button.watch {
-            background-image: url('images/Watch.jpg');
+            background-color: #ff99cc; /* Light Pink */
+            color: #00ff00; /* Green */
+            font-family: 'Times New Roman', serif;
+            font-size: 2.2rem; /* Adjust font size */
         }
         .button.cuddle {
-            background-image: url('images/Cuddle.jpg');
+            background-color: #99cc66; /* Light Olive */
+            color: #ff6600; /* Orange */
+            font-family: 'Arial', sans-serif;
+            font-size: 1.8rem; /* Adjust font size */
         }
         .button.baby {
-            background-image: url('images/Baby.jpg');
+            background-color: #ff9966; /* Light Salmon */
+            color: #0000ff; /* Blue */
+            font-family: 'Verdana', sans-serif;
+            font-size: 2.0rem; /* Adjust font size */
         }
         .button.fun-sound-5 {
-            background-image: url('images/FunSound5.jpg');
+            background-color: #66ff99; /* Light Mint */
+            color: #ff0000; /* Red */
+            font-family: 'Courier New', monospace;
+            font-size: 2.2rem; /* Adjust font size */
         }
         .button.poop {
-            background-image: url('images/Poop.jpg');
+            background-color: #ff6699; /* Light Rose */
+            color: #00ff00; /* Green */
+            font-family: 'Georgia', serif;
+            font-size: 1.8rem; /* Adjust font size */
         }
         .button.sing {
-            background-image: url('images/Sing.jpg');
+            background-color: #66ccff; /* Light Azure */
+            color: #ff6600; /* Orange */
+            font-family: 'Tahoma', sans-serif;
+            font-size: 2.0rem; /* Adjust font size */
         }
         .button.play {
-            background-image: url('images/Play.jpg');
+            background-color: #ffcc66; /* Light Apricot */
+            color: #0000ff; /* Blue */
+            font-family: 'Times New Roman', serif;
+            font-size: 2.2rem; /* Adjust font size */
         }
         .button.love {
-            background-image: url('images/Love.jpg');
+            background-color: #99ff66; /* Light Chartreuse */
+            color: #ff0000; /* Red */
+            font-family: 'Arial', sans-serif;
+            font-size: 1.8rem; /* Adjust font size */
         }
         .button.fun-sound-6 {
-            background-image: url('images/FunSound6.jpg');
+            background-color: #cc99cc; /* Light Mauve */
+            color: #00ffff; /* Cyan */
+            font-family: 'Verdana', sans-serif;
+            font-size: 2.0rem; /* Adjust font size */
         }
         .button.fun-sound-7 {
-            background-image: url('images/FunSound7.jpg');
+            background-color: #ffff66; /* Light Gold */
+            color: #ff00ff; /* Magenta */
+            font-family: 'Courier New', monospace;
+            font-size: 2.2rem; /* Adjust font size */
         }
-        .size-double {
-            grid-row: span 2; /* Double the height */
-            grid-column: span 2; /* Double the width */
+        .button.help {
+            background-color: #ffcc00; /* Light Gold */
+            color: #0000ff; /* Blue */
+            font-family: 'Comic Sans MS', cursive;
+            font-size: 2.0rem; /* Adjust font size */
+        }
+        .button.sleep {
+            background-color: #6699ff; /* Light Blue */
+            color: #ffffff; /* White */
+            font-family: 'Comic Sans MS', cursive;
+            font-size: 2.0rem; /* Adjust font size */
         }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.37.0/tsparticles.min.js"></script>
@@ -201,13 +322,35 @@
             createParticles(button, {
                 particles: {
                     number: { value: 50 },
-                    size: { value: 5 },
-                    move: { speed: 10 }, // Increase speed for quick effect
+                    size: { value: 5, random: { enable: true, minimumValue: 1 } },
+                    move: {
+                        enable: true,
+                        speed: { min: 5, max: 15 }, // Varying speeds
+                        direction: "none",
+                        random: true,
+                        straight: false,
+                        outMode: "out",
+                        bounce: false
+                    },
                     color: { value: ["#ff0000", "#00ff00", "#0000ff", "#ffff00", "#ff00ff", "#00ffff"] },
                     shape: { type: "circle" },
                     opacity: { value: 1, anim: { enable: true, speed: 2, opacity_min: 0, sync: false } },
                     line_linked: { enable: false },
-                    move: { enable: true, speed: 10, direction: "none", random: false, straight: false, out_mode: "out", bounce: false }
+                    emitters: {
+                        direction: "none",
+                        rate: {
+                            quantity: 50,
+                            delay: 0
+                        },
+                        size: {
+                            width: 0,
+                            height: 0
+                        },
+                        position: {
+                            x: 50,
+                            y: 50
+                        }
+                    }
                 }
             });
         }
@@ -217,43 +360,49 @@
     <div id="particles-js"></div>
     <div class="container">
         <!-- Group 1 -->
-        <button class="button word-button size1 size-double finn" onclick="playAudio('audio/Finn.mp3'); createFireworkParticles(this);"></button>
-        <button class="button word-button size5 size-double mom" onclick="playAudio('audio/Mom.mp3'); createFireworkParticles(this);"></button>
-        <button class="button word-button size5 size-double want" onclick="playAudio('audio/Want.mp3'); createFireworkParticles(this);"></button>
-        <button class="button word-button size3 size-double dad" onclick="playAudio('audio/Dad.mp3'); createFireworkParticles(this);"></button>
-        <button class="button fun-button size2 fun-sound-1" onclick="playAudio('audio/FunSound1.mp3'); createFireworkParticles(this);"></button>
+        <button class="button word-button size5 size-double mom" onclick="playAudio('audio/Mom.mp3'); createFireworkParticles(this);">Mom</button>
+        <button class="button word-button size5 size-double want" onclick="playAudio('audio/Want.mp3'); createFireworkParticles(this);">Want</button>
+        <button class="button word-button size3 size-double dad" onclick="playAudio('audio/Dad.mp3'); createFireworkParticles(this);">Dad</button>
+        <button class="button fun-button size2 fun-sound-1" onclick="playAudio('audio/FunSound1.mp3'); createFireworkParticles(this);">Fun Sound 1</button>
         
         <!-- Group 2 -->
-        <button class="button word-button size4 grandma" onclick="playAudio('audio/Grandma.mp3'); createFireworkParticles(this);"></button>
-        <button class="button word-button size3 size-double eat" onclick="playAudio('audio/Eat.mp3'); createFireworkParticles(this);"></button>
-        <button class="button word-button size5 declan" onclick="playAudio('audio/Declan.mp3'); createFireworkParticles(this);"></button>
-        <button class="button fun-button size6 fun-sound-2" onclick="playAudio('audio/FunSound2.mp3'); createFireworkParticles(this);"></button>
-        <button class="button word-button size1 ashling" onclick="playAudio('audio/Ashling.mp3'); createFireworkParticles(this);"></button>
+        <button class="button word-button size4 grandma" onclick="playAudio('audio/Grandma.mp3'); createFireworkParticles(this);">Grandma</button>
+        <button class="button word-button size3 size-double eat" onclick="playAudio('audio/Eat.mp3'); createFireworkParticles(this);">Eat</button>
+        <button class="button word-button size5 declan" onclick="playAudio('audio/Declan.mp3'); createFireworkParticles(this);">Declan</button>
+        <button class="button fun-button size6 fun-sound-2" onclick="playAudio('audio/FunSound2.mp3'); createFireworkParticles(this);">Fun Sound 2</button>
+        <button class="button word-button size1 ashling" onclick="playAudio('audio/Ashling.mp3'); createFireworkParticles(this);">Ashling</button>
         
         <!-- Group 3 -->
-        <button class="button word-button size1 killian" onclick="playAudio('audio/Killian.mp3'); createFireworkParticles(this);"></button>
-        <button class="button word-button size6 dont-want" onclick="playAudio('audio/DontWant.mp3'); createFireworkParticles(this);"></button>
-        <button class="button word-button size2 aunt" onclick="playAudio('audio/Aunt.mp3'); createFireworkParticles(this);"></button>
-        <button class="button word-button size3 uncle" onclick="playAudio('audio/Uncle.mp3'); createFireworkParticles(this);"></button>
+        <button class="button word-button size1 killian" onclick="playAudio('audio/Killian.mp3'); createFireworkParticles(this);">Killian</button>
+        <button class="button word-button size6 dont-want" onclick="playAudio('audio/DontWant.mp3'); createFireworkParticles(this);">Don't Want</button>
+        <button class="button word-button size2 aunt" onclick="playAudio('audio/Aunt.mp3'); createFireworkParticles(this);">Aunt</button>
+        <button class="button word-button size1  finn" onclick="playAudio('audio/Finn.mp3'); createFireworkParticles(this);">Finn</button>
+        <button class="button word-button size3 uncle" onclick="playAudio('audio/Uncle.mp3'); createFireworkParticles(this);">Uncle</button>
+
         
         <!-- Group 4 -->
-        <button class="button fun-button size5 fun-sound-3" onclick="playAudio('audio/FunSound3.mp3'); createFireworkParticles(this);"></button>
-        <button class="button word-button size4 funny" onclick="playAudio('audio/Funny.mp3'); createFireworkParticles(this);"></button>
-        <button class="button fun-button size2 fun-sound-4" onclick="playAudio('audio/FunSound4.mp3'); createFireworkParticles(this);"></button>
-        <button class="button word-button size1 watch" onclick="playAudio('audio/Watch.mp3'); createFireworkParticles(this);"></button>
-        <button class="button word-button size6 cuddle" onclick="playAudio('audio/Cuddle.mp3'); createFireworkParticles(this);"></button>
+        <button class="button fun-button size5 fun-sound-3" onclick="playAudio('audio/FunSound3.mp3'); createFireworkParticles(this);">Fun Sound 3</button>
+        <button class="button word-button size4 funny" onclick="playAudio('audio/Funny.mp3'); createFireworkParticles(this);">Funny</button>
+        <button class="button fun-button size2 fun-sound-4" onclick="playAudio('audio/FunSound4.mp3'); createFireworkParticles(this);">Fun Sound 4</button>
+        <button class="button word-button size1 watch" onclick="playAudio('audio/Watch.mp3'); createFireworkParticles(this);">Watch</button>
+        <button class="button word-button size6 cuddle" onclick="playAudio('audio/Cuddle.mp3'); createFireworkParticles(this);">Cuddle</button>
+
         
         <!-- Group 5 -->
-        <button class="button word-button size5 baby" onclick="playAudio('audio/Baby.mp3'); createFireworkParticles(this);"></button>
-        <button class="button fun-button size4 fun-sound-5" onclick="playAudio('audio/FunSound5.mp3'); createFireworkParticles(this);"></button>
-        <button class="button word-button size3 poop" onclick="playAudio('audio/Poop.mp3'); createFireworkParticles(this);"></button>
-        <button class="button word-button size2 sing" onclick="playAudio('audio/Sing.mp3'); createFireworkParticles(this);"></button>
-        <button class="button word-button size7 play" onclick="playAudio('audio/Play.mp3'); createFireworkParticles(this);"></button>
+        <button class="button word-button size5 baby" onclick="playAudio('audio/Baby.mp3'); createFireworkParticles(this);">Baby</button>
+        <button class="button fun-button size4 fun-sound-5" onclick="playAudio('audio/FunSound5.mp3'); createFireworkParticles(this);">Fun Sound 5</button>
+        <button class="button word-button size3 poop" onclick="playAudio('audio/Poop.mp3'); createFireworkParticles(this);">Poop</button>
+        <button class="button word-button size2 sing" onclick="playAudio('audio/Sing.mp3'); createFireworkParticles(this);">Sing</button>
+        <button class="button word-button size7 play" onclick="playAudio('audio/Play.mp3'); createFireworkParticles(this);">Play</button>
         
         <!-- Group 6 -->
-        <button class="button word-button size6 size-double love" onclick="playAudio('audio/Love.mp3'); createFireworkParticles(this);"></button>
-        <button class="button fun-button size1 fun-sound-6" onclick="playAudio('audio/FunSound6.mp3'); createFireworkParticles(this);"></button>
-        <button class="button fun-button size8 fun-sound-7" onclick="playAudio('audio/FunSound7.mp3'); createFireworkParticles(this);"></button>
+        <button class="button word-button size6 size-double love" onclick="playAudio('audio/Love.mp3'); createFireworkParticles(this);">Love</button>
+        <button class="button fun-button size1 fun-sound-6" onclick="playAudio('audio/FunSound6.mp3'); createFireworkParticles(this);">Fun Sound 6</button>
+        <button class="button fun-button size8 fun-sound-7" onclick="playAudio('audio/FunSound7.mp3'); createFireworkParticles(this);">Fun Sound 7</button>
+        
+        <!-- Group 7 -->
+        <button class="button word-button size2 help" onclick="playAudio('audio/Help.mp3'); createFireworkParticles(this);">Help</button>
+        <button class="button word-button size2 sleep" onclick="playAudio('audio/Sleep.mp3'); createFireworkParticles(this);">Sleep</button>
         
         <!-- Empty Space -->
         <div class="empty"></div>
